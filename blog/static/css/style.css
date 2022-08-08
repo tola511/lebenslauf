@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+:root
+{
+    --clr: #FAFAFA;
+}
+body
+{
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.head
+{
+    position: relative;
+    background: #848484;
+    width: 100%;
+    height: 180px;
+
+
+}
+.name
+{
+    position: absolute;
+    left: 100px;
+    top: 110px;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 1.5em;
+    text-shadow: 2px 2px #585858;
+}
+.name2
+{
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    color: var(--clr);
+    font-weight: 100;
+    font-size: 3.5em;
+    text-shadow: 2px 2px #585858;
+
+}
+.line
+{
+    position: absolute;
+    top: 179px;
+    width: 350px;
+    height: 1px;
+    background: #A9BCF5;
+}
+.profil
+{
+    position: absolute;
+    left: 220px;
+    top: 10px;
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--clr);
+    box-shadow: 2px 2px #585858;
+
+}
+.navigation
+{
+    width: 100%;
+    height: 70px;
+    top: 180px;
+    background: #848484;
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+.navigation ul
+{
+    display: flex;
+    width: 350px;
+
+}
+.navigation ul li
+{
+    position: relative;
+    right: 100px;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    left: 25px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+.navigation ul li.active a .icon
+{
+    transform: translateY(15px);
+}
+.navigation ul li a .text
+{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px #585858;
+    transition: 0,5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+.indicator
+{
+    position: absolute;
+    top: 50%;
+    right: 365px;
+    width: 70px;
+    height: 70px;
+    background: #A9BCF5;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 16%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 10px 0 0 var(--clr);
+}
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 16%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-left-radius: 20px;
+    box-shadow: -1px 10px 0 0 var(--clr);
+}
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(50px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(50px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(50px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(50px * 4));
+}
+.navigation ul li:nth-child(6).active ~ .indicator
+{
+    transform: translateX(calc(50px * 5));
+}
+.navigation ul li:nth-child(7).active ~ .indicator
+{
+    transform: translateX(calc(50px * 6));
+}
